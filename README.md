@@ -1,5 +1,5 @@
 # visualization-bubble-sorting
-visualization bubble sorting
+Using Pygame to visualize bubble sorting
 ```Python 
 import pygame,sys
 import time
