@@ -59,16 +59,14 @@ while True:
     w=2
     for i in range(200):
         pygame.draw.rect(screen,[255,255,255],[50+i*(w+1),300-arr[i],w,arr[i]],0)
-    for i in range (199):
-        for j in range(199-i):
-            if judge==1:
-                break
-            if (arr[j] > arr[j+1]):
-                arr[j], arr[j+1]= arr[j+1],arr[j]
-                judge=1
+    for j in range(199):
         if judge==1:
-            judge=0
             break
+        if (arr[j] > arr[j+1]):
+            arr[j], arr[j+1]= arr[j+1],arr[j]
+            judge=1
+    if judge==1:
+        judge=0
     if ans==arr:
         draw_text(screen,'Finish',50,350,400)
     pygame.display.update()
